@@ -1,1 +1,0 @@
-# buntachi.github.io
