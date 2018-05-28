@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spill</title>
+</head>
+<body>
+<h1>Spill</h1>
+<h2>Fullfør spillene for å komme videre</h2>
+<p>Husk å aktivere flash player!</p>
+<h3>Flappy Frank</h3>
+<p>Få 20 poeng i flappy frank for å få svaret</p>
+<p>Trykk på space for å flakse</p>
+<iframe id="spill" allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/225980716/?autostart=false" frameborder="0" allowfullscreen></iframe>
+<br>
+<input id="svar1" type="text" placeholder="Svar"><button id="btn1">Neste</button>
+<h3 id="text21">Flower Picker</h3>
+<p id="text22">Plukk 30 blomster på 20 sekunder for å få svaret</p>
+<p id="text23">Trykk på space med musepekeren på blomsten for å plukke den</p>
+<iframe id="spill2" allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/226011130/?autostart=false" frameborder="0" allowfullscreen></iframe>
+<br>
+<input id="svar2" type="text" placeholder="Svar"><button id="btn2">Neste</button>
+<script>
+    spill2.style.visibility='hidden';
+    text21.style.visibility='hidden';
+    text22.style.visibility='hidden';
+    text23.style.visibility='hidden';
+    svar2.style.visibility='hidden';
+    btn2.style.visibility='hidden';
+    btn1.onclick=function () {
+        if (svar1.value==="eple"){
+            spill2.style.visibility='visible';
+            text21.style.visibility='visible';
+            text22.style.visibility='visible';
+            text23.style.visibility='visible';
+            svar2.style.visibility='visible';
+            btn2.style.visibility='visible';
+        }
+    }
+
+
+</script>
+</body>
+</html>
