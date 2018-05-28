@@ -20,6 +20,7 @@
 <iframe id="spill2" allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/226011130/?autostart=false" frameborder="0" allowfullscreen></iframe>
 <br>
 <input id="svar2" type="text" placeholder="Svar"><button id="btn2">Neste</button>
+<p id="text31">Har ikke et spill enda :)</p>
 <script>
     spill2.style.visibility='hidden';
     text21.style.visibility='hidden';
@@ -27,6 +28,7 @@
     text23.style.visibility='hidden';
     svar2.style.visibility='hidden';
     btn2.style.visibility='hidden';
+    text31.style.visibility='hidden';
     btn1.onclick=function () {
         if (svar1.value==="eple"){
             spill2.style.visibility='visible';
@@ -37,7 +39,11 @@
             btn2.style.visibility='visible';
         }
     }
-
+    btn2.onclick=function () {
+        if (svar2.value==="blomst") {
+            text31.style.visibility='visible';
+        }
+    }
 
 </script>
 </body>
