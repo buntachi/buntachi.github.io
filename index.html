@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spill</title>
+    <title>Spill Utfordringene</title>
 </head>
 <body>
-<h1>Spill</h1>
-<h2>Fullfør spillene for å komme videre</h2>
+<h1>Spill Utfordringene</h1>
+<h2>Fullfør spillene for å komme videre.</h2>
 <p>Husk å aktivere flash player!</p>
 <h3>Flappy Frank</h3>
-<p>Få 20 poeng i flappy frank for å få svaret</p>
-<p>Trykk på space for å flakse</p>
+<p>Få 20 poeng i flappy frank for å få svaret.</p>
+<p>Trykk på space for å flakse.</p>
 <iframe id="spill" allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/225980716/?autostart=false" frameborder="0" allowfullscreen></iframe>
 <br>
 <input id="svar1" type="text" placeholder="Svar"><button id="btn1">Neste</button>
 <h3 id="text21">Flower Picker</h3>
-<p id="text22">Plukk 30 blomster på 20 sekunder for å få svaret</p>
-<p id="text23">Trykk på space med musepekeren på blomsten for å plukke den</p>
+<p id="text22">Plukk 30 blomster på 20 sekunder for å få svaret.</p>
+<p id="text23">Trykk på space med musepekeren på blomsten for å plukke den.</p>
 <iframe id="spill2" allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/226011130/?autostart=false" frameborder="0" allowfullscreen></iframe>
 <br>
 <input id="svar2" type="text" placeholder="Svar"><button id="btn2">Neste</button>
-<p id="text31">Har ikke et spill enda :)</p>
+<h3 id="text31">Banana Catcher</h3>
+<p id="text32">Ta imot 30 bananer uten å miste alle livene for å finne svaret.</p>
+<p id="text33">Bruk piltastene for å bevege bollen til venstre og høyre.</p>
+<iframe id="spill3" allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/226049608/?autostart=false" frameborder="0" allowfullscreen></iframe>
+<br>
+<input id="svar3" type="text" placeholder="Svar"><button id="btn3">Neste</button>
 <script>
     spill2.style.visibility='hidden';
     text21.style.visibility='hidden';
@@ -29,6 +34,11 @@
     svar2.style.visibility='hidden';
     btn2.style.visibility='hidden';
     text31.style.visibility='hidden';
+    text32.style.visibility='hidden';
+    text33.style.visibility='hidden';
+    spill3.style.visibility='hidden';
+    svar3.style.visibility='hidden';
+    btn3.style.visibility='hidden';
     btn1.onclick=function () {
         if (svar1.value==="eple"){
             spill2.style.visibility='visible';
@@ -38,10 +48,15 @@
             svar2.style.visibility='visible';
             btn2.style.visibility='visible';
         }
-    }
+    };
     btn2.onclick=function () {
         if (svar2.value==="blomst") {
             text31.style.visibility='visible';
+            text32.style.visibility='visible';
+            text33.style.visibility='visible';
+            spill3.style.visibility='visible';
+            svar3.style.visibility='visible';
+            btn3.style.visibility='visible';
         }
     }
 
