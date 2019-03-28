@@ -1,0 +1,88 @@
+body {
+  background-image: url("kalk.jpg");
+  background-size: cover;
+}
+h1 {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  background-color: gray;
+  text-align: center;
+  color: orange;
+  padding: 15px;
+  border: 1px solid black;
+}
+.kalkulator {
+  display: block;
+  margin: auto;
+  padding-bottom: 150px;
+  width: 40%;
+  padding: 40px;
+  background-color: gray;
+  background: rgba(127, 127, 127, 0.97)
+}
+.inputs{
+  display: block;
+  float: left;
+  height: 30px;
+  width: 18%;
+  text-align: center;
+  background-color: #b8babc;
+  border: none;
+  outline: none;
+}
+#inp1 {
+  margin-left: 27.5%;
+  position: relative;
+}
+#tegn {
+  color: orange;
+  display: block;
+  float: left;
+  height: 30px;
+  text-align: center;
+  width: 50px;
+  position: relative;
+  top: -20px;
+  font-size: 25px;
+}
+#svar {
+  text-align: center;
+  display: block;
+  float: none;
+  background-color: green;
+  width: fit-content;
+  padding: 15px;
+  margin: auto;
+  border: 2px solid black;
+}
+#optegn {
+  display: block;
+  margin: auto;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  width: 200px;
+  border: 1px solid black;
+}
+.bColorO {
+  background-color: orange;
+}
+.open, #optegn:hover {
+  background-color: #f7be5b;
+}
+.btn {
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 25px;
+}
+.btn:hover {
+  background-color: orange;
+}
+.tegnene {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 40px 40px 40px;
+  justify-content: center;
+}

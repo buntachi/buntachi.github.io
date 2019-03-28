@@ -1,0 +1,53 @@
+body {
+  background-color: orange;
+  overflow-x: hidden;
+}
+h2 {
+  color: black;
+  text-align: center;
+}
+.start1 {
+  font-size: 130%;
+  position: relative;
+  display: block;
+  margin: auto;
+  background-color: gray;
+  color: orange;
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  left: 0px;
+  height: 300px;
+}
+
+.start2 {
+  font-size: 130%;
+  display: block;
+  margin: auto;
+  position: relative;
+  background-color: gray;
+  color: orange;
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  left: -1500px;
+  top: -304px;
+  height: 300px;
+}
+#btn {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: -300px;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: orange;
+  padding: 3px;
+  background-color: gray;
+}
+#btn:hover {
+  color: gray;
+  background-color: orange;
+  border: 1px solid gray;
+}

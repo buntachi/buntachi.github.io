@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Terning</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="terning.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <a id="home" href="homepage.html">Hjemmeside</a>
+      <a id="navItem" href="animation.html">Animation</a>
+      <a id="navItem" href="collapsible.html" >Collapsible</a>
+      <a id="navItem"  href="kalkulator.html" >Kalkulator</a>
+      <a id="navItem" class="on" href="terning.html" >Terning</a>
+      <a id="navItem" href="randomcolor.html">Random Farge</a>
+    </nav>
+  <div class="tbox">
+    <h2>Trykk på terningen for å kaste</h2>
+    <button type="button" id="terningen" class="terningen" onclick="kast()"name="button">&#127922;</button>
+  </div>
+  <script>
+    var kaste = 0;
+    var terning=0;
+    function kast() {
+      kaste = 0;
+      document.getElementById('terningen').classList.add("stor");
+      rulle();
+    }
+    function rulle() {
+      kaste = kaste + 1;
+      terning = Math.floor((Math.random() * 6) + 1);
+      visterning();
+      console.log("kast " + kaste);
+      console.log("terning " + terning);
+      if (kaste < 6) {
+        setTimeout (function () {
+          rulle();
+        }, Math.floor((Math.random() * 300) + 200))
+      }
+    }
+    function visterning() {
+      if (terning === 1) {
+        document.getElementById('terningen').innerHTML= "&#9856;"
+      }
+      if (terning === 2) {
+        document.getElementById('terningen').innerHTML= "&#9857;"
+      }
+      if (terning === 3) {
+        document.getElementById('terningen').innerHTML= "&#9858;"
+      }
+      if (terning === 4) {
+        document.getElementById('terningen').innerHTML= "&#9859;"
+      }
+      if (terning === 5) {
+        document.getElementById('terningen').innerHTML= "&#9860;"
+      }
+      if (terning === 6) {
+        document.getElementById('terningen').innerHTML= "&#9861;"
+      }
+
+    }
+  </script>
+  </body>
+</html>

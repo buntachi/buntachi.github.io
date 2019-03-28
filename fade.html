@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fade</title>
+  </head>
+  <body>
+    <h1 id="text">euriowroiew oiweruworiuw</h1>
+    <button type="button" name="button" onclick="fade()">qweqwe</button>
+  </body>
+  <script type="text/javascript">
+  var farge1 = 0
+  var farge2 = 0
+  var farge3 = 0
+    function fade() {
+      farge1++;
+      farge2++;
+      farge3++;
+      if (farge1>254) {
+        farge1 = 0
+        farge2 = 0
+        farge3 = 0
+      }
+      fargene = "rgba("+farge1 +", " + farge2 + ", " + farge3 + ")";
+      console.log(fargene);
+      document.getElementById('text').style.color = fargene;
+      setTimeout(function() {
+        fade();
+      }, 20)
+    }
+  </script>
+</html>

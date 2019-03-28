@@ -1,0 +1,40 @@
+@keyframes fadeout {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes fadein {
+  100% {opacity: 1;}
+  0% {opacity: 0;}
+}
+@keyframes mright {
+  to {
+    left: 87px;
+  }
+}
+@keyframes mleft {
+  to {
+    left: 0px;
+  }
+}
+.fadeout {
+  animation-name: fadeout;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.fadein {
+  animation-name: fadein;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.moveright {
+  left: 0px;
+  animation-name: mright;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.moveleft {
+  left: 87px;
+  animation-name: mleft;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="kalkulator.css">
+    <link rel="stylesheet" href="fadeout.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <a id="home" href="homepage.html">Hjemmeside</a>
+      <a id="navItem" href="animation.html">Animation</a>
+      <a id="navItem" href="collapsible.html" >Collapsible</a>
+      <a id="navItem" class="on" href="kalkulator.html" >Kalkulator</a>
+      <a id="navItem" href="terning.html" >Terning</a>
+      <a id="navItem" href="randomcolor.html">Random Farge</a>
+    </nav>
+    <br>
+    <h1>Kalkulator</h1>
+    <div class="kalkulator">
+      <br>
+      <input type="number" oninput="regn()" id="inp1" class="inputs"> <p id="tegn">+</p> <input type="number" oninput="regn()" id="inp2" class="inputs">
+      <br><br><br><br>
+      <p id="svar"></p>
+      <br>
+      <br>
+      <button id="optegn" type="button" class="bColorO" onclick="opntegn()">&#8595 Tegn &#8595;</button>
+      <br>
+      <section id="tegnene" class="tegnene">
+        <button id="pluss" type="button" class="btn" onclick="setpluss()">+</button>
+        <button id="minus" type="button" class="btn" onclick="setminus()">-</button>
+        <button id="gange" type="button" class="btn" onclick="setgange()">*</button>
+        <button id="dele" type="button" class="btn" onclick="setdele()">/</button>
+        <button id="sqrt" type="button" class="btn" onclick="setsqrt()">√</button>
+        <button id="runde" type="button" class="btn" onclick="round()">≈</button>
+      </section>
+    </div>
+    <script>
+    var current = "pluss";
+    var avrund = 0;
+    torute()
+    document.getElementById('pluss').classList.add('bColorO');
+    document.getElementById('tegnene').style.display='none';
+    function regn() {
+      if (current==="pluss") {
+        var answer = parseFloat(inp1.value) + parseFloat(inp2.value);
+      }
+      if (current==="minus") {
+        var answer = parseFloat(inp1.value) - parseFloat(inp2.value);
+      }
+      if (current==="square") {
+        var answer = Math.sqrt(parseFloat(inp1.value));
+      }
+      if (current==="gange") {
+        var answer = parseFloat(inp1.value) * parseFloat(inp2.value);
+      }
+      if (current==="dele") {
+        var answer = parseFloat(inp1.value) / parseFloat(inp2.value);
+      }
+      if (avrund===1) {
+        answer = Math.round(answer);
+      }
+      document.getElementById('svar').innerHTML = answer;
+    }
+    function enrute() {
+      document.getElementById('tegn').classList.remove('fadein');
+      document.getElementById('tegn').classList.add('fadeout');
+      document.getElementById('inp2').classList.remove('fadein');
+      document.getElementById('inp2').classList.add('fadeout');
+      document.getElementById('inp1').classList.remove('moveleft');
+      document.getElementById('inp1').classList.add('moveright');
+      setTimeout (function() {
+        document.getElementById('inp2').style.display="none";
+        document.getElementById('tegn').style.display="none";
+      }, 1000)
+    }
+    function torute() {
+      document.getElementById('tegn').classList.remove('fadeout');
+      document.getElementById('tegn').classList.add('fadein');
+      document.getElementById('inp2').classList.remove('fadeout');
+      document.getElementById('inp2').classList.add('fadein');
+      document.getElementById('inp1').classList.add('moveleft');
+      document.getElementById('inp1').classList.remove('moveright');
+      document.getElementById('inp2').style.display="block";
+      document.getElementById('tegn').style.display="block";
+      setTimeout (function() {
+        document.getElementById('inp2').style.display="block";
+        document.getElementById('tegn').style.display="block";
+      }, 1000)
+    }
+    function opntegn() {
+      if (tegnene.style.display==="none") {
+        document.getElementById('tegnene').style.display='grid';
+        document.getElementById('optegn').innerHTML="&#8593 Tegn &#8593;"
+        document.getElementById('optegn').classList.remove('bColorO');
+        document.getElementById('optegn').classList.add('open');
+      }else {
+        document.getElementById('tegnene').style.display='none';
+        document.getElementById('optegn').innerHTML="&#8595 Tegn &#8595;"
+        document.getElementById('optegn').classList.add('bColorO');
+        document.getElementById('optegn').classList.remove('open');
+      }
+    }
+    function setpluss() {
+      current = "pluss";
+      torute()
+      regn();
+      document.getElementById('tegn').innerHTML="+";
+      document.getElementById('minus').classList.remove('bColorO');
+      document.getElementById('sqrt').classList.remove('bColorO');
+      document.getElementById('pluss').classList.add('bColorO');
+      document.getElementById('gange').classList.remove('bColorO');
+      document.getElementById('dele').classList.remove('bColorO');
+    }
+    function setminus() {
+      current = "minus";
+      torute()
+      regn();
+      document.getElementById('tegn').innerHTML="-";
+      document.getElementById('pluss').classList.remove('bColorO');
+      document.getElementById('sqrt').classList.remove('bColorO');
+      document.getElementById('minus').classList.add('bColorO');
+      document.getElementById('gange').classList.remove('bColorO');
+      document.getElementById('dele').classList.remove('bColorO');
+    }
+    function setsqrt() {
+      current = "square";
+      enrute();
+      regn();
+      document.getElementById('pluss').classList.remove('bColorO');
+      document.getElementById('sqrt').classList.add('bColorO');
+      document.getElementById('minus').classList.remove('bColorO');
+      document.getElementById('gange').classList.remove('bColorO');
+      document.getElementById('dele').classList.remove('bColorO');
+    }
+    function setgange() {
+      current = "gange";
+      torute();
+      regn();
+      document.getElementById('tegn').innerHTML="*";
+      document.getElementById('pluss').classList.remove('bColorO');
+      document.getElementById('sqrt').classList.remove('bColorO');
+      document.getElementById('minus').classList.remove('bColorO');
+      document.getElementById('gange').classList.add('bColorO');
+      document.getElementById('dele').classList.remove('bColorO');
+    }
+    function setdele() {
+      current = "dele"
+      torute();
+      regn();
+      document.getElementById('tegn').innerHTML="/";
+      document.getElementById('pluss').classList.remove('bColorO');
+      document.getElementById('sqrt').classList.remove('bColorO');
+      document.getElementById('minus').classList.remove('bColorO');
+      document.getElementById('gange').classList.remove('bColorO');
+      document.getElementById('dele').classList.add('bColorO');
+    }
+    function round() {
+      if (avrund===0) {
+        document.getElementById('runde').classList.add('bColorO');
+        avrund=1;
+        regn()
+      }else {
+        document.getElementById('runde').classList.remove('bColorO');
+        avrund=0;
+        regn()
+      }
+    }
+    </script>
+  </body>
+</html>

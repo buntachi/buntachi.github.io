@@ -1,0 +1,27 @@
+.collapsible {
+  width: 100%;
+  background-color: gray;
+  outline: none;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: orange;
+  border: 1px solid black;
+}
+.active, .collapsible:hover {
+  background-color: orange;
+  color: gray;
+  border: 1px solid gray;
+}
+.ting {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background-color: gray;
+  color: orange;
+  border: 1px solid black;
+}
+body {
+  background-color: orange;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>collapsible</title>
+    <link rel="stylesheet" href="collapsible.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <a id="home" href="homepage.html">Hjemmeside</a>
+      <a id="navItem" href="animation.html">Animation</a>
+      <a id="navItem" class="on" href="collapsible.html" >Collapsible</a>
+      <a id="navItem" href="kalkulator.html" >Kalkulator</a>
+      <a id="navItem" href="terning.html" >Terning</a>
+      <a id="navItem" href="randomcolor.html">Random Farge</a>
+    </nav>
+    <br> <br>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <button id="btn" class="collapsible">Åpne</button>
+    <div class="ting">
+      <p>Viktig Info<br>Eller noe</p>
+    </div>
+    <script>
+    var coll = document.getElementsByClassName('collapsible');
+    var i;
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var ting = this.nextElementSibling;
+        if (ting.style.display === "block") {
+          ting.style.display = "none";
+        } else {
+          ting.style.display = "block";
+        }
+      })
+    }
+    </script>
+  </body>
+</html>

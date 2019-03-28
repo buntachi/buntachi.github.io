@@ -1,0 +1,44 @@
+@keyframes noe1 {
+  to {
+    left: 0px;
+  }
+}
+@keyframes move1 {
+  to {
+    left: -1500px;
+  }
+}
+.venstre1 {
+  font-size: 130%;
+  position: relative;
+  display: block;
+  margin: auto;
+  background-color: gray;
+  color: orange;
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  left: 1500px;
+  height: 300px;
+  animation-name: noe1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.venstre2 {
+  font-size: 130%;
+  display: block;
+  margin: auto;
+  position: relative;
+  background-color: gray;
+  color: orange;
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  left: 0px;
+  top: -304px;
+  height: 300px;
+  animation-name: move1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}

@@ -1,0 +1,27 @@
+body {
+  background-color: orange;
+}
+h1 {
+  display: block;
+  margin: auto;
+  background-color: gray;
+  color: orange;
+  text-align: center;
+  width: fit-content;
+  padding: 15px;
+  border: 1px solid black;
+  font-size: 45px;
+}
+h2 {
+  text-align: center;
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+  margin-top: 7%;
+  padding: 30px;
+  border: 2px solid gray;
+}
+button {
+  display: block;
+  margin: auto;
+}

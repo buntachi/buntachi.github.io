@@ -1,0 +1,44 @@
+@keyframes noe {
+  to {
+    left: 1500px;
+  }
+}
+@keyframes move {
+  to {
+    left: 0px;
+  }
+}
+.hoyre1 {
+  font-size: 130%;
+  position: relative;
+  display: block;
+  margin: auto;
+  background-color: gray;
+  color: orange;
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  left: 0px;
+  height: 300px;
+  animation-name: noe;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.hoyre2 {
+  font-size: 130%;
+  display: block;
+  margin: auto;
+  position: relative;
+  background-color: gray;
+  color: orange;
+  border: 2px solid black;
+  text-align: center;
+  width: 30%;
+  left: -1500px;
+  top: -304px;
+  height: 300px;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}

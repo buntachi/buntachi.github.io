@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="anistart.css">
+    <link rel="stylesheet" href="anihoyre.css">
+    <link rel="stylesheet" href="anivenstre.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <a id="home" href="homepage.html">Hjemmeside</a>
+      <a id="navItem" class="on" href="animation.html">Animation</a>
+      <a id="navItem" href="collapsible.html" >Collapsible</a>
+      <a id="navItem" href="kalkulator.html" >Kalkulator</a>
+      <a id="navItem" href="terning.html" >Terning</a>
+      <a id="navItem" href="randomcolor.html">Random Farge</a>
+    </nav>
+    <br>
+    <h2>Her er er det en slide Animation</h2>
+      <br>
+    <p id="nr1" class="start1">Trykk på knappen</p>
+    <p id="nr2" class="start2">Det er mange kule ting jeg kan gjøre med dette</p>
+    <button id="btn" onclick="trykk()">Neste</button>
+    <script>
+      var modus = 1;
+      function trykk() {
+        if (modus===1) {
+          hoyre();
+          modus = 2;
+          document.getElementById('btn').innerHTML="Tilbake";
+        }else {
+          venstre();
+          modus = 1;
+          document.getElementById('btn').innerHTML="Neste";
+        }
+      }
+      function hoyre() {
+        document.getElementById('nr1').classList.remove('venstre1');
+        document.getElementById('nr2').classList.remove('venstre2');
+        document.getElementById('nr1').classList.add('hoyre1');
+        document.getElementById('nr2').classList.add('hoyre2');
+
+      }
+      function venstre() {
+        document.getElementById('nr1').classList.remove('hoyre1');
+        document.getElementById('nr2').classList.remove('hoyre2');
+        document.getElementById('nr1').classList.add('venstre1');
+        document.getElementById('nr2').classList.add('venstre2');
+
+      }
+    </script>
+  </body>
+</html>
