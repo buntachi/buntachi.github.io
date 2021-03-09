@@ -1,0 +1,36 @@
+#board
+{
+    display: block;
+    margin: auto;
+    width: 640px;
+    height: 640px;
+}
+.squareB
+{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(139, 68, 20);
+    float: left;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.squareW
+{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(226, 226, 226);
+    display: block;
+    float: left;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.current 
+{
+    background-color: chartreuse;
+}
