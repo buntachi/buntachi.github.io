@@ -1,7 +1,7 @@
 var squareB = ["<div id =\"square", "\" class=\"squareB\"></div>"];
 var squareW = ["<div id =\"square", "\" class=\"squareW\"></div>"];
 var sq = ["square",""];
-var img = ["<img draggable=\"false\" src = \"pics/" ,".png\">"];
+var img = ["<img draggable=\"false\" src = \"" ,".png\">"];
 var selectedSQ = "";
 var selected = "";
 var availableMoves = [];
